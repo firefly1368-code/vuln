@@ -1,0 +1,14 @@
+$TTL    604800
+@       IN      SOA     ns.lab. admin.lab. (
+                              3         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      ns.lab.
+ns      IN      A       SERVER_IP_PLACEHOLDER
+dvwa        IN      A   SERVER_IP_PLACEHOLDER
+juiceshop   IN      A   SERVER_IP_PLACEHOLDER
+webgoat     IN      A   SERVER_IP_PLACEHOLDER
+mutillidae  IN      A   SERVER_IP_PLACEHOLDER

@@ -1,0 +1,36 @@
+# ============================================================
+# Vulnerable Web Apps - untuk latihan web security internal
+# Akses lewat Nginx reverse proxy, bukan port langsung
+# ============================================================
+services:
+
+  dvwa:
+    image: vulnerables/web-dvwa
+    container_name: lab-dvwa
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8081:80"
+    environment:
+      - MYSQL_PASS=p@ssw0rd_lab
+
+  juiceshop:
+    image: bkimminich/juice-shop
+    container_name: lab-juiceshop
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8082:3000"
+
+  webgoat:
+    image: webgoat/webgoat
+    container_name: lab-webgoat
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8083:8080"
+      - "127.0.0.1:9090:9090"
+
+  mutillidae:
+    image: citizenstig/nowasp
+    container_name: lab-mutillidae
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8084:80"
