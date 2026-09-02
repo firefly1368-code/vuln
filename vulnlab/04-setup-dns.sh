@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-cd ~/vulnlab
+cd "$(dirname "$(readlink -f "$0")")"
 
 SERVER_IP=$(hostname -I | awk '{print $1}')
 echo "Terdeteksi IP server: $SERVER_IP"

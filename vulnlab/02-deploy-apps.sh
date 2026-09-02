@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-cd ~/vulnlab
+cd "$(dirname "$(readlink -f "$0")")"
 echo "[1/2] Menjalankan semua vulnerable app via Docker Compose..."
 docker compose up -d
 

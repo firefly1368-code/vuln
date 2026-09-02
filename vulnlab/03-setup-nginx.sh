@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-cd ~/vulnlab
+cd "$(dirname "$(readlink -f "$0")")"
 
 echo "[1/3] Copy config Nginx per aplikasi..."
 sudo cp configs/*.lab.conf /etc/nginx/sites-available/
